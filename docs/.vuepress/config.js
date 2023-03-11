@@ -1,10 +1,12 @@
+const { resolve } = require("path");
+
 module.exports = {
   base: '/',
   title: '我的博客',
   configureWebpack: {
     resolve: {
       alias: {
-        '@alias': "http://mufeng.web3v.work/imgs",
+        '@imgRoot': resolve("http://mufeng.web3v.work/imgs"),
       }
     }
   },

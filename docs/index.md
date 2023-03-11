@@ -1,7 +1,7 @@
 ---
 home: true
 heroText: 捡捡记记
-heroImage: ./imgs/logo.png
+heroImage: http://mufeng.web3v.work/imgs/logo.png
 tagline: 
 actionText: 立刻进入 →
 actionLink: /pages/d657ad/
