@@ -1,12 +1,21 @@
 const { resolve } = require("path");
 
 module.exports = {
-  base: '/',
+  base: '/vuepress-blog/',
   title: '我的博客',
   configureWebpack: {
     resolve: {
-      alias: {
-        '@imgRoot': resolve("http://mufeng.web3v.work/imgs"),
+      alias: {}
+    }
+  },
+  devServer: {
+    proxy: {
+      '/imgs': {
+        target: 'http://mufeng.web3v.work/imgs',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/imgs': ''
+        }
       }
     }
   },
