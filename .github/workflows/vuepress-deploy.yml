@@ -1,0 +1,22 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      master
+jobs:
+  # 任务ID
+  build-and-deploy:
+    # 运行环境
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: Build and Deploy
+        uses: jenkey2011/vuepress-deploy@v1.8.1
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          TARGET_REPO: withnosoul/vuepress-blog
+          TARGET_BRANCH: gh_pages
+          BUILD_SCRIPT: yarn && yarn build
+          BUILD_DIR: docs/.vuepress/dist/
