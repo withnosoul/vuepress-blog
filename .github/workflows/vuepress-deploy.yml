@@ -8,15 +8,21 @@ jobs:
   build-and-deploy:
     # 运行环境
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [ 10.x ]
+    # 步骤
     steps:
       - name: Checkout
         uses: actions/checkout@master
 
-      - name: Build and Deploy
-        uses: jenkey2011/vuepress-deploy@v1.8.1
+      - name: Use Node.js ${{ matrix.node-version}}
+        uses: actions/setup-node@v1
+        with:
+          node-vesion: ${{ matrix.node-version }}
+
+      - name: run deploy.sh
         env:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          TARGET_REPO: withnosoul/vuepress-blog
-          TARGET_BRANCH: gh_pages
-          BUILD_SCRIPT: yarn && yarn build
-          BUILD_DIR: docs/.vuepress/dist/
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        run: npm install && npm run deploy
+

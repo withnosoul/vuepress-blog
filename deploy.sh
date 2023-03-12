@@ -16,7 +16,7 @@ git init
 git add -A
 git commit -m 'deploy'
 
-git checkout -b gh_pages
+#git checkout -b gh_pages
 
 # 如果发布到 https://<USERNAME>.github.io
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
@@ -25,3 +25,6 @@ git checkout -b gh_pages
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
 #git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
 git push -f git@github.com:withnosoul/vuepress-blog.git master:gh_pages
+
+cd -
+rm -rf docs/.vuepress/dist
