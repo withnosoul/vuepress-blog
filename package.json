@@ -1,25 +1,24 @@
 {
-  "name": "withnosoul.github.io",
-  "version": "1.0.0",
-  "description": "personal blog",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "vuepress dev docs --temp .temp",
-    "build": "vuepress build docs",
-    "deploy": "bash deploy.sh"
-  },
-  "keywords": [
-    "vuepress",
-    "blog"
-  ],
-  "author": "withnosoul",
-  "license": "MIT",
-  "dependencies": {},
-  "devDependencies": {
-    "@vuepress/plugin-medium-zoom": "^1.9.7",
-    "vuepress": "^1.9.7",
-    "vuepress-plugin-fulltext-search": "^2.2.1",
-    "vuepress-plugin-one-click-copy": "^1.0.6",
-    "vuepress-theme-vdoing": "^1.12.8"
-  }
+    "name": "withnosoul.github.io",
+    "version": "1.0.0",
+    "description": "personal blog",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "vuepress dev docs --temp .temp",
+        "build": "vuepress build docs",
+        "deploy": "bash deploy.sh"
+    },
+    "keywords": [
+        "vuepress",
+        "blog"
+    ],
+    "author": "withnosoul",
+    "license": "MIT",
+    "dependencies": {
+        "@vuepress/plugin-medium-zoom": "^1.9.7",
+        "vuepress": "^1.9.7",
+        "vuepress-plugin-fulltext-search": "^2.2.1",
+        "vuepress-plugin-one-click-copy": "^1.0.6",
+        "vuepress-theme-vdoing": "^1.12.8"
+    }
 }
